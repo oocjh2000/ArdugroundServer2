@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using AdrugroundServer2._0.Models;
 
 namespace AdrugroundServer2._0.Controllers
 {
@@ -12,9 +14,9 @@ namespace AdrugroundServer2._0.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return "asdf";
         }
 
         // GET api/values/5
@@ -40,6 +42,13 @@ namespace AdrugroundServer2._0.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        // GET api/values/version
+        [HttpGet("version")]
+        public ActionResult<string> Version()
+        {
+            return "\"[version : 1.0]\"";
         }
     }
 }

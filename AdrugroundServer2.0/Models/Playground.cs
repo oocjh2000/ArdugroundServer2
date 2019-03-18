@@ -9,7 +9,6 @@ namespace AdrugroundServer2._0.Models
             this.maxPlayers = MaxPlayer;
         }
 
-       
         public string playGroundName;
         public int playerCount;
         public Player[] players;
