@@ -48,7 +48,7 @@ namespace AdrugroundServer2._0.Controllers
         [HttpGet("version")]
         public ActionResult<string> Version()
         {
-            return "\"[version : 1.0]\"";
+            return "version : 1.0";
         }
     }
 }
