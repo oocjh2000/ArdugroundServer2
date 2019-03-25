@@ -5,17 +5,15 @@ namespace AdrugroundServer2._0.Models
 {
     public class Player
     {
-        public Player(Player p)
+        public Player(int hp,int Exp,string Name)
         {
-            this.Exp = p.Exp;
-            this.hp = p.hp;
-            this.Name = p.Name;
+            this.Exp = Exp;
+            this.hp = hp;
+            this.Name = Name;
         }
         public bool CheckPlayer()
         {
-            if (Regex.IsMatch(Email,
-                @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
-                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$"))
+            if (Regex.IsMatch(Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
                 return true;
             return false;
         }
