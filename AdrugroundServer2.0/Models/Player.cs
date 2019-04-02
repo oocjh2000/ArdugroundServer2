@@ -11,6 +11,7 @@ namespace AdrugroundServer2._0.Models
             this.hp = hp;
             this.Name = Name;
         }
+        //fifebase 사용전까지 지우지말고
         public bool CheckPlayer()
         {
             if (Regex.IsMatch(Email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))

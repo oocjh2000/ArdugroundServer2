@@ -14,7 +14,7 @@ namespace AdrugroundServer2._0.Controllers
     [ApiController]
     public class PlaygroundController : ControllerBase
     {
-        private static List<Playground> playgrounds = new List<Playground>();
+        public static List<Playground> playgrounds = new List<Playground>();
 
         //api/playground
         [HttpGet]
