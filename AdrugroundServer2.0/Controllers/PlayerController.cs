@@ -18,9 +18,19 @@ namespace AdrugroundServer2._0.Controllers
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            var newplayer = new Player(100, 100, "차재훈");
-            players.Add(newplayer);
-            return JsonConvert.SerializeObject(newplayer);
+            if (id < players.Count)
+                if (players[id] != null)
+                    return JsonConvert.SerializeObject(players[id]);
+                else
+                {
+                    Response.StatusCode = 404;
+                    return "404";
+                }
+            else
+            {
+                Response.StatusCode = 404;
+                return "404";
+            }
         }
 
         // POST api/Player

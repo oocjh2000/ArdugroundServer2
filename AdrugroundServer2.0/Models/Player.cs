@@ -5,9 +5,9 @@ namespace AdrugroundServer2._0.Models
 {
     public class Player
     {
-        public Player(int hp,int Exp,string Name)
+        public Player(int hp, string Name)
         {
-            this.Exp = Exp;
+            //this.Exp = Exp;
             this.hp = hp;
             this.Name = Name;
         }
@@ -20,7 +20,7 @@ namespace AdrugroundServer2._0.Models
         }
         public string Name;
         public string Email;
-        public int Exp;
+       // public int Exp;
         public int hp;
     }
 }

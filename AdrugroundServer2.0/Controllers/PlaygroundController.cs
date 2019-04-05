@@ -25,11 +25,11 @@ namespace AdrugroundServer2._0.Controllers
 
         //api/playground/5
         [HttpPost("{id}")]
-        public ActionResult<string> Post(int id, [FromForm]string name)
+        public ActionResult<string> Post([FromForm]string name)
         {
+            int id = playgrounds.Count + 1;
 
-
-            var newPlayground = new Playground(playgrounds.Count, name, id, new Player(100,100,"차재훈"));
+            var newPlayground = new Playground(playgrounds.Count, name, id, new Player(100,"차재훈"));
             var i = 0;
             while (i < playgrounds.Count)
             {
